@@ -68,7 +68,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YXm-gQ-Dn2">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="fBH-N9-V3d"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="fBH-N9-V3d">
+                            <connections>
+                                <segue destination="s9q-7r-qYH" kind="presentation" id="yYp-no-1zp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -88,8 +92,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2rY-iA-0K1">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rY-iA-0K1">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="44"/>
                                 <animations/>
                                 <items>
                                     <navigationItem id="PZY-7w-HEK">
@@ -98,19 +102,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-dv-dxB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-dv-dxB">
                                 <rect key="frame" x="28" y="108" width="263" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Version" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-IM-hDE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Version" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-IM-hDE">
                                 <rect key="frame" x="28" y="269" width="263" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Company" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1QH-XX-apA">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Company" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1QH-XX-apA">
                                 <rect key="frame" x="28" y="185" width="263" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -119,6 +123,20 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2rY-iA-0K1" firstAttribute="top" secondItem="JYx-ng-jGf" secondAttribute="top" id="2Sn-uc-gSy"/>
+                            <constraint firstItem="2rY-iA-0K1" firstAttribute="leading" secondItem="JYx-ng-jGf" secondAttribute="leadingMargin" constant="-20" id="JMF-8X-beE"/>
+                            <constraint firstItem="6Z2-IM-hDE" firstAttribute="centerX" secondItem="JYx-ng-jGf" secondAttribute="centerX" id="P6O-gt-TW0"/>
+                            <constraint firstItem="6Z2-IM-hDE" firstAttribute="centerY" secondItem="JYx-ng-jGf" secondAttribute="centerY" id="W4D-tO-lSg"/>
+                            <constraint firstItem="1QH-XX-apA" firstAttribute="leading" secondItem="Lj8-dv-dxB" secondAttribute="leading" id="YjF-Ak-Keb"/>
+                            <constraint firstItem="Lj8-dv-dxB" firstAttribute="centerX" secondItem="2rY-iA-0K1" secondAttribute="centerX" id="ZiK-r8-0QZ"/>
+                            <constraint firstItem="Lj8-dv-dxB" firstAttribute="leading" secondItem="JYx-ng-jGf" secondAttribute="leadingMargin" constant="12" id="bzH-0L-mwc"/>
+                            <constraint firstItem="6Z2-IM-hDE" firstAttribute="top" secondItem="1QH-XX-apA" secondAttribute="bottom" constant="54" id="fIh-mz-0qB"/>
+                            <constraint firstItem="1QH-XX-apA" firstAttribute="top" secondItem="Lj8-dv-dxB" secondAttribute="bottom" constant="47" id="fjS-PM-uZV"/>
+                            <constraint firstItem="Lj8-dv-dxB" firstAttribute="trailing" secondItem="1QH-XX-apA" secondAttribute="trailing" id="hPF-YS-Tur"/>
+                            <constraint firstItem="6Z2-IM-hDE" firstAttribute="leading" secondItem="1QH-XX-apA" secondAttribute="leading" id="nT6-0u-sIb"/>
+                            <constraint firstItem="6Z2-IM-hDE" firstAttribute="trailing" secondItem="1QH-XX-apA" secondAttribute="trailing" id="znK-gZ-YpS"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
