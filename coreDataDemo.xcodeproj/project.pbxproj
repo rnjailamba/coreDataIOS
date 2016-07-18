@@ -17,6 +17,8 @@
 		635D6DB61D3D180C008F7A69 /* coreDataDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D6DB51D3D180C008F7A69 /* coreDataDemoTests.m */; };
 		635D6DC11D3D180C008F7A69 /* coreDataDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D6DC01D3D180C008F7A69 /* coreDataDemoUITests.m */; };
 		635D6DD01D3D1CD9008F7A69 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D6DCF1D3D1CD9008F7A69 /* DeviceDetailViewController.m */; };
+		635D6DD71D3D3F83008F7A69 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D6DD51D3D3F83008F7A69 /* CollectionViewCell.m */; };
+		635D6DD81D3D3F83008F7A69 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635D6DD61D3D3F83008F7A69 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		635D6DC21D3D180C008F7A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635D6DCE1D3D1CD9008F7A69 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
 		635D6DCF1D3D1CD9008F7A69 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
+		635D6DD41D3D3F83008F7A69 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		635D6DD51D3D3F83008F7A69 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		635D6DD61D3D3F83008F7A69 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +115,17 @@
 				635D6D9C1D3D180B008F7A69 /* AppDelegate.m */,
 				635D6D9E1D3D180B008F7A69 /* ViewController.h */,
 				635D6D9F1D3D180B008F7A69 /* ViewController.m */,
+				635D6DCE1D3D1CD9008F7A69 /* DeviceDetailViewController.h */,
+				635D6DCF1D3D1CD9008F7A69 /* DeviceDetailViewController.m */,
+				635D6DD41D3D3F83008F7A69 /* CollectionViewCell.h */,
+				635D6DD51D3D3F83008F7A69 /* CollectionViewCell.m */,
+				635D6DD61D3D3F83008F7A69 /* CollectionViewCell.xib */,
 				635D6DA11D3D180B008F7A69 /* Main.storyboard */,
 				635D6DA71D3D180C008F7A69 /* Assets.xcassets */,
 				635D6DA91D3D180C008F7A69 /* LaunchScreen.storyboard */,
 				635D6DAC1D3D180C008F7A69 /* Info.plist */,
 				635D6DA41D3D180C008F7A69 /* coreDataDemo.xcdatamodeld */,
 				635D6D981D3D180B008F7A69 /* Supporting Files */,
-				635D6DCE1D3D1CD9008F7A69 /* DeviceDetailViewController.h */,
-				635D6DCF1D3D1CD9008F7A69 /* DeviceDetailViewController.m */,
 			);
 			path = coreDataDemo;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 			files = (
 				635D6DAB1D3D180C008F7A69 /* LaunchScreen.storyboard in Resources */,
 				635D6DA81D3D180C008F7A69 /* Assets.xcassets in Resources */,
+				635D6DD81D3D3F83008F7A69 /* CollectionViewCell.xib in Resources */,
 				635D6DA31D3D180B008F7A69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635D6DD71D3D3F83008F7A69 /* CollectionViewCell.m in Sources */,
 				635D6DA01D3D180B008F7A69 /* ViewController.m in Sources */,
 				635D6DA61D3D180C008F7A69 /* coreDataDemo.xcdatamodeld in Sources */,
 				635D6DD01D3D1CD9008F7A69 /* DeviceDetailViewController.m in Sources */,
