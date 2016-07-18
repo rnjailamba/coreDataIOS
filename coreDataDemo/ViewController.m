@@ -7,13 +7,36 @@
 //
 
 #import "ViewController.h"
+#import <CoreData/CoreData.h>
+
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // Fetch the devices from persistent data store
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Device"];
+    self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
