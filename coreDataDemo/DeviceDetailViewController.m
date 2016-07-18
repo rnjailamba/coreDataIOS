@@ -7,6 +7,8 @@
 //
 
 #import "DeviceDetailViewController.h"
+#import <CoreData/CoreData.h>
+
 
 @interface DeviceDetailViewController ()
 - (IBAction)saveAction:(id)sender;
@@ -50,25 +52,25 @@
 }
 */
 
-- (IBAction)cancelAction:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (IBAction)saveAction:(id)sender {
     NSManagedObjectContext *context = [self managedObjectContext];
-//    
-//    // Create a new managed object
-//    NSManagedObjectModel *newDevice = [kSecAttrDescription insertNewObjectForEntityForName:@"Device" inManagedObjectContext:context];
-//    [newDevice setValue:self.nameText.text forKey:@"name"];
-//    [newDevice setValue:self.versionText.text forKey:@"version"];
-//    [newDevice setValue:self.companyText.text forKey:@"company"];
-//    
-//    NSError *error = nil;
-//    // Save the object to persistent store
-//    if (![context save:&error]) {
-//        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-//    }
-//    
-//    [self dismissViewControllerAnimated:YES completion:nil];
+    NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Device" inManagedObjectContext:context];
+    [newDevice setValue:self.nameText.text forKey:@"name"];
+    [newDevice setValue:self.versionText.text forKey:@"version"];
+    [newDevice setValue:self.companyText.text forKey:@"company"];
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    
+}
+
+- (IBAction)cancelAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 @end
