@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1099" y="326"/>
         </scene>
-        <!--View Controller-->
+        <!--Device Detail View Controller-->
         <scene sceneID="WMT-N1-AxH">
             <objects>
-                <viewController id="s9q-7r-qYH" sceneMemberID="viewController">
+                <viewController id="s9q-7r-qYH" customClass="DeviceDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2la-4G-GjJ"/>
                         <viewControllerLayoutGuide type="bottom" id="1b2-z4-MWf"/>
@@ -97,8 +97,16 @@
                                 <animations/>
                                 <items>
                                     <navigationItem id="PZY-7w-HEK">
-                                        <barButtonItem key="leftBarButtonItem" title="Save" id="8mR-cq-rQf"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="xg1-oI-U8d"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Save" id="8mR-cq-rQf">
+                                            <connections>
+                                                <action selector="saveAction:" destination="s9q-7r-qYH" id="l1V-gz-QDY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="xg1-oI-U8d">
+                                            <connections>
+                                                <action selector="cancelAction:" destination="s9q-7r-qYH" id="oOQ-D1-EK0"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -139,6 +147,11 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="companyText" destination="1QH-XX-apA" id="oOd-dT-ezw"/>
+                        <outlet property="nameText" destination="Lj8-dv-dxB" id="9QA-EN-EMU"/>
+                        <outlet property="versionText" destination="6Z2-IM-hDE" id="f96-eB-Pms"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDZ-2n-KIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,6 +16,7 @@
 		635D6DAB1D3D180C008F7A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635D6DA91D3D180C008F7A69 /* LaunchScreen.storyboard */; };
 		635D6DB61D3D180C008F7A69 /* coreDataDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D6DB51D3D180C008F7A69 /* coreDataDemoTests.m */; };
 		635D6DC11D3D180C008F7A69 /* coreDataDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D6DC01D3D180C008F7A69 /* coreDataDemoUITests.m */; };
+		635D6DD01D3D1CD9008F7A69 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635D6DCF1D3D1CD9008F7A69 /* DeviceDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		635D6DBC1D3D180C008F7A69 /* coreDataDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coreDataDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635D6DC01D3D180C008F7A69 /* coreDataDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coreDataDemoUITests.m; sourceTree = "<group>"; };
 		635D6DC21D3D180C008F7A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635D6DCE1D3D1CD9008F7A69 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
+		635D6DCF1D3D1CD9008F7A69 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				635D6DAC1D3D180C008F7A69 /* Info.plist */,
 				635D6DA41D3D180C008F7A69 /* coreDataDemo.xcdatamodeld */,
 				635D6D981D3D180B008F7A69 /* Supporting Files */,
+				635D6DCE1D3D1CD9008F7A69 /* DeviceDetailViewController.h */,
+				635D6DCF1D3D1CD9008F7A69 /* DeviceDetailViewController.m */,
 			);
 			path = coreDataDemo;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			files = (
 				635D6DA01D3D180B008F7A69 /* ViewController.m in Sources */,
 				635D6DA61D3D180C008F7A69 /* coreDataDemo.xcdatamodeld in Sources */,
+				635D6DD01D3D1CD9008F7A69 /* DeviceDetailViewController.m in Sources */,
 				635D6D9D1D3D180B008F7A69 /* AppDelegate.m in Sources */,
 				635D6D9A1D3D180B008F7A69 /* main.m in Sources */,
 			);
