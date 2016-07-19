@@ -27,6 +27,7 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Device"];
     self.devices = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     NSLog(@"%@",self.devices);
+    [self.collectionView reloadData];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,7 +51,10 @@
     CollectionViewCell *myCell = [self.collectionView
                                     dequeueReusableCellWithReuseIdentifier:@"MyCell"
                                     forIndexPath:indexPath];
-    
+    NSManagedObject *device = [self.devices objectAtIndex:indexPath.row];
+    [myCell.label setText:[NSString stringWithFormat:@"%@ %@", [device valueForKey:@"name"], [device valueForKey:@"version"]]];
+    [myCell.details setText:[device valueForKey:@"company"]];
+
     
     
     return myCell;
@@ -59,7 +63,7 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return self.devices.count;
 }
 
 
@@ -71,6 +75,14 @@
         context = [delegate managedObjectContext];
     }
     return context;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout*)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    return CGSizeMake(width, 75);
 }
 
 @end

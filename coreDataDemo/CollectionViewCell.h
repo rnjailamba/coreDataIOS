@@ -10,4 +10,8 @@
 
 @interface CollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+- (IBAction)buttonAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *details;
+
 @end
